@@ -1,0 +1,140 @@
+.intro-content{
+    position: relative;
+    top: -8rem;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--gap);
+    height: 100vh;
+}
+.intro-text-content, .intro-img{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.intro-text-content h2{
+    font-size: 6rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.intro-img img,
+.intro-svg{
+    max-width: 100%;
+    height: auto;
+}
+.top3-content{
+    max-width: 64rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    min-height: 100vh;
+    
+}
+.grid-one-content{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    height:100vh;
+
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: var(--gap);
+    counter-reset: gridcounter;
+}
+
+.grid h3{
+    font-size: 3rem;
+    position: relative;
+    padding-left: 5rem;
+    margin-bottom: 3 rem;
+
+
+    
+}
+.grid h3::before{
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position:absolute;
+    font-size: 8rem;
+    font-size: italic;
+    top: -4rem;
+    left: 1rem;
+    transform: rotate(7deg);
+
+}
+.gallery-img{
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow:hidden; 
+}
+
+.gallery-img img{
+    transition: all 300ms ease-in-out;
+
+}
+.gallery-img img:hover{
+    transform: translate(-3%,3%) scale(1.2) ;
+    
+}
+
+.contact-form{
+    -ms-grid-column-align: left;
+}
+
+.contact-form .form-grid{
+border: none;
+display: block;
+flex-wrap: wrap;
+flex-direction: row;
+}
+.form-grid{
+    font-size: italic;
+    font-size: 1.6rem;
+}
+.form-group{
+    flex: 1 1 320px;
+    margin-left: -20rem;
+
+}
+.form-group label{
+    display: block;
+    margin-left: auto;
+}
+.form-group input,
+.form-group textarea{
+    border:none;
+    background:white;
+    padding: 1.5 rem, 2rem;
+    width: 100%;
+
+}
+
+.form-group button{
+    border: 0.4rem solid;
+    background: white ;
+    color: black;
+    padding: 1.5rem,;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 300 ms ease-in-out;
+
+}
+.form-group button:hover{
+    background: none;
+    color: white
+
+}
+.label{
+    text-align: center;
+}
+@media (max-width: 800px){
+    .intro-content,.grid{
+        grid-template-columns: 1fr;
+    }
+}
+
